@@ -7,6 +7,14 @@ const port = 5000;
 
 // app.use(express.static(path.join(__dirname, '../build')));
 // app.use(cors)
+
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 app.get('/api', async (req, res) => {
   // Extract color parameters from the request
   let { red, green, blue, w, h } = req.query;
