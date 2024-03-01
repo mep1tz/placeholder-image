@@ -14,7 +14,7 @@ function App() {
 
     const createImage = () =>{
         console.log("Hiiii");
-        fetch(`/api?red=${red}&green=${green}&blue=${blue}&h=${height}&w=${width}`)
+        fetch(`https://placeholder-image-mnv8.onrender.com/api?red=${red}&green=${green}&blue=${blue}&h=${height}&w=${width}`)
         .then(response => response.blob())
         .then(blob => {
           const url = URL.createObjectURL(blob);
