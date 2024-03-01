@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 // app.use(express.static(path.join(__dirname, '../build')));
-app.use(cors)
+// app.use(cors)
 app.get('/api', async (req, res) => {
   // Extract color parameters from the request
   let { red, green, blue, w, h } = req.query;
